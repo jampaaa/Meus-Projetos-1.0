@@ -1,2 +1,2 @@
 # Meus Projetos 1.0
- Primeiro repositório
+ Primeiro repositório de projetos.
