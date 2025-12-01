@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delícias da Casa - Bolos Caseiros</title>
+    <link href="[https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&display=swap](https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Pacifico&display=swap)" rel="stylesheet">
+    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)">
+    
+    <!-- Link para o seu arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Bolos da Casa</a>
+        <nav>
+            <a href="#sabores">Sabores</a>
+            <a href="#precos">Preços</a>
+            <a href="#pedido">Encomendar</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Bolos Caseiros Feitos com Amor</h1>
+        <p>Do nosso forno direto para a sua mesa.</p>
+        <a href="#pedido" class="btn-whats">
+            <i class="fab fa-whatsapp"></i> Fazer Pedido
+        </a>
+    </section>
+
+    <section id="sabores" class="container">
+        <h2 class="titulo-secao">Nossos Sabores</h2>
+        <div class="grid-sabores">
+            <div class="card">
+                <h3>Simples & Tradicionais</h3>
+                <ul>
+                    <li>Trigo</li>
+                    <li>Laranja</li>
+                    <li>Milho</li>
+                    <li>Banana</li>
+                    <li>Massa de Mandioca</li>
+                    <li>Macaxeira</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Com Cobertura</h3>
+                <ul>
+                    <li>Chocolate</li>
+                    <li>Cenoura com Chocolate</li>
+                    <li>Meio a Meio</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Especiais</h3>
+                <ul>
+                    <li>Bolo de Rolo (1kg, 500g, 350g)</li>
+                    <li>Bolo Panetone (Natal)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="precos" class="container">
+        <h2 class="titulo-secao">Tabela de Valores</h2>
+        
+        <h3>Bolos Simples</h3>
+        <table>
+            <tr><th>Tamanho</th><th>Preço</th></tr>
+            <tr><td>Grande (1kg)</td><td class="preco">R$ 20,00</td></tr>
+            <tr><td>Pequeno (500g)</td><td class="preco">R$ 12,00</td></tr>
+        </table>
+
+        <h3>Com Cobertura</h3>
+        <table>
+            <tr><th>Tamanho</th><th>Preço</th></tr>
+            <tr><td>Grande (1kg)</td><td class="preco">R$ 26,00</td></tr>
+            <tr><td>Pequeno (500g)</td><td class="preco">R$ 16,00</td></tr>
+        </table>
+
+        <h3>Bolo de Rolo</h3>
+        <table>
+            <tr><th>Tamanho</th><th>Preço</th></tr>
+            <tr><td>Grande (1kg)</td><td class="preco">R$ 38,00</td></tr>
+            <tr><td>Médio (500g)</td><td class="preco">R$ 19,00</td></tr>
+            <tr><td>Pequeno (350g)</td><td class="preco">R$ 13,30</td></tr>
+        </table>
+    </section>
+
+    <section id="pedido" class="container">
+        <h2 class="titulo-secao">Faça seu Pedido</h2>
+        <div class="area-pedido">
+            <p style="text-align: center; margin-bottom: 20px;">Selecione abaixo para calcular e enviar no WhatsApp.</p>
+            <form>
+                <div class="campo-form">
+                    <label>Tipo de Bolo:</label>
+                    <select id="tipoBolo" onchange="atualizarOpcoes()">
+                        <option value="simples">Simples (Sem cobertura)</option>
+                        <option value="cobertura">Com Cobertura</option>
+                        <option value="rolo">Bolo de Rolo</option>
+                        <option value="panetone">Panetone (Natal)</option>
+                    </select>
+                </div>
+
+                <div class="campo-form">
+                    <label>Sabor:</label>
+                    <select id="saborBolo"></select>
+                </div>
+
+                <div class="campo-form">
+                    <label>Tamanho:</label>
+                    <select id="tamanhoBolo" onchange="calcularTotal()"></select>
+                </div>
+
+                <div class="box-total">
+                    Total: <span id="valorTotal">R$ 0,00</span>
+                </div>
+
+                <a href="#" id="linkWhatsapp" class="btn-whats" style="width: 100%; text-align: center;" target="_blank">
+                    Enviar Pedido no WhatsApp
+                </a>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bolos Caseiros da Casa</p>
+    </footer>
+
+    <!-- Link para o seu arquivo JS externo -->
+    <script src="script.js"></script>
+</body>
+</html>
